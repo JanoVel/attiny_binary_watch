@@ -2,7 +2,7 @@
 
 This repository contains the files used to build the watch.
 
-* The *case* folder contains the files for the lasercut case (one DXF and one SVG).
+* The *case* folder contains the files for the lasercut case (the source solvespace file and two exports, one DXF and one SVG).
 
 * The *code* folder contains the Arduino code for the watch firmware.
 
