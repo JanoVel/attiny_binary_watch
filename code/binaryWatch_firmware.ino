@@ -135,9 +135,9 @@ int main(void) {
   #endif
 
 
-	// // // read the actual registers:
-	byte hourdata = DS1302_read(DS1302_HOURS);
-	byte mindata  = DS1302_read(DS1302_MINUTES);
+  // // // read the actual registers:
+  byte hourdata = DS1302_read(DS1302_HOURS);
+  byte mindata  = DS1302_read(DS1302_MINUTES);
   // byte secdata  = DS1302_read(DS1302_SECONDS);
 
   byte monthdata  = DS1302_read(DS1302_MONTH);
@@ -147,9 +147,9 @@ int main(void) {
   pinMode(DS1302_CE_PIN, OUTPUT);
   digitalWrite(DS1302_CE_PIN, LOW);
 
-	// // // decode values of decimals stored as binary coded decimals:
-	byte minutes  = ((mindata >> 4)*10 + (mindata & 0xf));
-	byte hours    = ((bitRead(hourdata,4))*10 + (hourdata & 0xf)); // for 12h mode
+  // // // decode values of decimals stored as binary coded decimals:
+  byte minutes  = ((mindata >> 4)*10 + (mindata & 0xf));
+  byte hours    = ((bitRead(hourdata,4))*10 + (hourdata & 0xf)); // for 12h mode
   // byte hours  = ((hourdata >> 4)*10 + (hourdata & 0xf)); // for 24h mode
   // byte seconds  = ((secdata >> 4)*10+(secdata & 0xf));
 
